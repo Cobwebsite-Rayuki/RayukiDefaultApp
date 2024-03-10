@@ -1,0 +1,10 @@
+﻿{
+  "outputPath": "./Front/src/generated",
+  "csProj": "./${{DefaultApp}}.csproj",
+  "exportEnumByDefault": true,
+  "httpRouter": {
+    "uri": "/${{DefaultApp}}",
+    "routerName": "${{DefaultApp}}Router",
+    "variableRoutesName": "${{DefaultApp}}HttpRoutes"
+  }
+}

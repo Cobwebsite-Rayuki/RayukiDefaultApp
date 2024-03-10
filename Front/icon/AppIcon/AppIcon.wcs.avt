@@ -1,0 +1,19 @@
+@import '@root/_fct.gs.avt';
+
+:host {
+	rk-img {
+		--img-stroke-color: transparent;
+		--img-fill-color: #acf4d6;
+		max-height: 100%;
+		flex-grow: 1;
+		padding: 10%;
+	}
+}
+
+@include mobile {
+	:host {
+		rk-img {
+			padding: 7px;
+		}
+	}
+}

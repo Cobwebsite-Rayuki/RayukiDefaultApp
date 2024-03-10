@@ -1,0 +1,91 @@
+{
+    "module": "${{DefaultApp}}",
+    "build": [
+        {
+			"name": "Main",
+			"src": [
+				"./src/*"
+			],
+			"compile": [
+				{
+					"output": [
+						"../_export/wwwroot/apps/${{DefaultApp}}/index.js",
+						"%RAYUKI_WWW_PATH%/apps/${{DefaultApp}}/index.js"
+					]
+				}
+			],
+			"dependances": [
+				{
+					"uri": "D:\\Rayuki\\Libs\\RayukiCore\\Core.package.avt",
+					"include": "none"
+				},
+				{
+					"uri": "@Aventus",
+					"include": "none"
+				},
+				{
+					"uri": "@AventusUI",
+					"include": "none"
+				},
+				{
+					"uri": "@AventusSharp",
+					"include": "none"
+				}
+			],
+			"namespaceStrategy": "followFoldersCamelCase",
+			"namespaceRoot": "./src"
+		},
+		{
+			"name": "Icon",
+			"src": [
+				"./icon/*"
+			],
+			"compile": [
+				{
+					"output": [
+						"../_export/wwwroot/apps/${{DefaultApp}}/icon.js",
+						"%RAYUKI_WWW_PATH%/apps/${{DefaultApp}}/icon.js"
+					]
+				}
+			],
+			"dependances": [
+				{
+					"uri": "D:\\Rayuki\\Libs\\RayukiCore\\Core.package.avt",
+					"include": "none"
+				},
+				{
+					"uri": "@Aventus",
+					"include": "none"
+				},
+				{
+					"uri": "@AventusUI",
+					"include": "none"
+				},
+				{
+					"uri": "@AventusSharp",
+					"include": "none"
+				}
+			],
+			"namespaceStrategy": "rules",
+			"namespaceRules": {
+                "System": [
+                    "./icon/*"
+                ]
+			}
+		}
+    ],
+	"static": [
+		{
+			"name": "Main",
+			"input": "./static",
+			"output": [
+				"../_export/wwwroot/apps/${{DefaultApp}}/",
+				"%RAYUKI_WWW_PATH%/apps/${{DefaultApp}}/"
+			]
+		}
+	],
+    "aliases": {
+        "@root": "./",
+        "~": "/apps/${{DefaultApp}}"
+    }
+}

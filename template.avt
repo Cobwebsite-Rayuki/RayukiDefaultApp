@@ -1,0 +1,12 @@
+{
+    "name": "Rayuki app",
+    "description": "Create a new Rayuki app",
+    "version": "1.0.0",
+    "variables": {
+        "DefaultApp":{
+            "question": "Define the name for the app",
+            "type": "input",
+            "defaultValue": "${{folderName}}"
+        }
+    }
+}

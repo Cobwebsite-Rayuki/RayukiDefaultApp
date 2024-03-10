@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <BaseOutputPath></BaseOutputPath>
+    <CodeAnalysisRuleSet>Analyzers.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="AventusSharp">
+      <HintPath>D:\Rayuki\Libs\AventusSharp\AventusSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Core">
+      <HintPath>D:\Rayuki\Libs\RayukiCore\Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Front\" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /F /R /Y /I &quot;$(ProjectDir)$(OutDir)$(AssemblyName).dll&quot; &quot;$(ProjectDir)_export\apps\$(AssemblyName)\ &quot;" Condition="'$(Configuration)' == 'Release'" />
+    <Exec Command="xcopy /F /R /Y /I &quot;$(ProjectDir)$(OutDir)$(AssemblyName).dll&quot; &quot;$(RAYUKI_APP_PATH)\$(AssemblyName)\ &quot;" Condition="'$(Configuration)' == 'Debug'" />
+    <Exec Command="xcopy /F /R /Y /I &quot;$(ProjectDir)$(OutDir)$(AssemblyName).dll&quot; &quot;$(ProjectDir)_export\apps\$(AssemblyName)\ &quot;" Condition="'$(Configuration)' == 'Debug'" />
+  </Target>
+
+
+</Project>
