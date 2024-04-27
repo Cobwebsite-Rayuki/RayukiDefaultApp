@@ -1,4 +1,4 @@
-import { Index } from "./frame/Index/Index.wcl.avt";
+import { IndexFrame } from "./frame/IndexFrame/IndexFrame.wcl.avt";
 
 namespace Application {
 	export class Main extends Core.System.Application implements Aventus.DefaultComponent {
@@ -27,8 +27,8 @@ namespace Application {
 		/**
 		 * @inheritdoc
 		 */
-		protected override defineRoutes(): void {
-			this.addRoute("/", Index);
+		protected override async defineRoutes(): Promise<void> {
+			this.addRoute("/", IndexFrame);
 		 }
 		//#endregion
 		

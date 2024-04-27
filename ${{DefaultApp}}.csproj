@@ -21,6 +21,10 @@
     <Folder Include="Front\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="xcopy /F /R /Y /I &quot;$(ProjectDir)$(OutDir)$(AssemblyName).dll&quot; &quot;$(ProjectDir)_export\apps\$(AssemblyName)\ &quot;" Condition="'$(Configuration)' == 'Release'" />
     <Exec Command="xcopy /F /R /Y /I &quot;$(ProjectDir)$(OutDir)$(AssemblyName).dll&quot; &quot;$(RAYUKI_APP_PATH)\$(AssemblyName)\ &quot;" Condition="'$(Configuration)' == 'Debug'" />

@@ -5,6 +5,10 @@
   "httpRouter": {
     "uri": "/${{DefaultApp}}",
     "routerName": "${{DefaultApp}}Router",
+    "namespace": "Routes",
     "variableRoutesName": "${{DefaultApp}}HttpRoutes"
+  },
+  "wsEndpoint": {
+    "prefix": "/${{DefaultApp}}"
   }
 }

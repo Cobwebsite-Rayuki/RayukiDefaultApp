@@ -1,5 +1,5 @@
 namespace Application.Main.Frame {
-	export class Index extends Core.System.Frame implements Aventus.DefaultComponent {
+	export class IndexFrame extends Core.System.Frame implements Aventus.DefaultComponent {
 
 		//#region static
 		
