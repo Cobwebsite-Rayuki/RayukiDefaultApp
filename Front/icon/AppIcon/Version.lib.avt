@@ -1,0 +1,3 @@
+import { AppInfo } from "../src/generated/${{DefaultApp}}App.lib.avt";
+
+export const Version = AppInfo.Version;

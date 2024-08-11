@@ -38,7 +38,8 @@
 		{
 			"name": "Icon",
 			"src": [
-				"./icon/*"
+				"./icon/*",
+				"./src/generated/${{DefaultApp}}App.lib.avt"
 			],
 			"compile": [
 				{
@@ -86,6 +87,7 @@
 	],
     "aliases": {
         "@root": "./",
-        "~": "/apps/${{DefaultApp}}"
+        "~": "/apps/${{DefaultApp}}",
+		"$version": "${{DefaultApp}}.Version"
     }
 }
