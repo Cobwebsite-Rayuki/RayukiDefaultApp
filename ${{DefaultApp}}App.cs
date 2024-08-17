@@ -18,5 +18,16 @@ namespace ${{DefaultApp}}
         {
             return "${{DefaultApp}}";
         }
+
+
+        public override Core.Migrations.Seeder? DefineSeeder()
+        {
+            return new Seeder();
+        }
+
+        public override Core.Migrations.Migrator? DefineMigrator()
+        {
+            return new Migrator();
+        }
     }
 }

@@ -1,6 +1,6 @@
-namespace ${{DefaultApp}}.Logic
+namespace ${{DefaultApp}}.Migrations
 {
-    public class Seeder : Core.Logic.Seeder
+    public class Seeder : Core.Migrations.Seeder
     {
         protected override int DefineVersion()
         {
