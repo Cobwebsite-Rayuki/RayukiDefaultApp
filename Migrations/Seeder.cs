@@ -9,7 +9,7 @@ namespace ${{DefaultApp}}.Migrations
             return AppInfo.Version;
         }
 
-        protected override bool LoadVersion(int version)
+        protected override VoidWithError LoadVersion(int version)
         {
             return new VoidWithError();
         }
