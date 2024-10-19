@@ -39,7 +39,7 @@ namespace ${{DefaultApp}}
         {
             get
             {
-                return FileStorage.Get<CarteCommandeApp>();
+                return FileStorage.Get<${{DefaultApp}}App>();
             }
         }
     }
