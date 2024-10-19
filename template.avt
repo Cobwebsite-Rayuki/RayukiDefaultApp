@@ -8,5 +8,8 @@
             "type": "input",
             "defaultValue": "${{folderName}}"
         }
-    }
+    },
+    "cmdsAfterAdmin": [
+        "npm run link"
+    ]
 }

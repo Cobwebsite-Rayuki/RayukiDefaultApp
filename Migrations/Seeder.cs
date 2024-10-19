@@ -1,3 +1,5 @@
+using AventusSharp.Tools;
+
 namespace ${{DefaultApp}}.Migrations
 {
     public class Seeder : Core.Migrations.Seeder
@@ -9,8 +11,7 @@ namespace ${{DefaultApp}}.Migrations
 
         protected override bool LoadVersion(int version)
         {
-            
-            return true;
+            return new VoidWithError();
         }
     
     }

@@ -1,0 +1,3 @@
+:host {
+    // you can override native variable here to customize your application like the button or the table
+}

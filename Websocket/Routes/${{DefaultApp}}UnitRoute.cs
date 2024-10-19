@@ -7,7 +7,6 @@ using ${{DefaultApp}}.Logic.DM;
 
 namespace ${{DefaultApp}}.Websocket.Routes {
 
-    [EndPoint<MainEndPoint>("${{DefaultApp}}")]
     public class ${{DefaultApp}}UnitRoute : StorableWsRoute<${{DefaultApp}}Unit>
     {
         protected override IGenericDM<${{DefaultApp}}Unit>? GetDM()

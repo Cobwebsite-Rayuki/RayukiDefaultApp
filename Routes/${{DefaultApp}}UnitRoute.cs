@@ -1,12 +1,11 @@
 using AventusSharp.Routes;
 using AventusSharp.Routes.Attributes;
-using ${{DefaultApp}}.Logic;
+using ${{DefaultApp}}.Logic.DM;
 using ${{DefaultApp}}.Data;
 using Path = AventusSharp.Routes.Attributes.Path;
 
 namespace ${{DefaultApp}}.Routes
 {
-    [TypescriptPath("${{DefaultApp}}Unit")]
     public class ${{DefaultApp}}UnitRoute : StorableRoute<${{DefaultApp}}Unit>
     {
         [Get, Path("/custom")]

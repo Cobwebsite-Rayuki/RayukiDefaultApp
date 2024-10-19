@@ -1,4 +1,4 @@
-@import '@root/_fct.gs.avt';
+@import '@root/static/_functions.gs.avt';
 
 :host {
 	rk-img {

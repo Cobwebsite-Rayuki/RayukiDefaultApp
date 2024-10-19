@@ -26,9 +26,13 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /F /R /Y /I &quot;$(ProjectDir)$(OutDir)$(AssemblyName).dll&quot; &quot;$(ProjectDir)_export\apps\$(AssemblyName)\ &quot;" Condition="'$(Configuration)' == 'Release'" />
+    <Exec Command="xcopy /F /R /Y /I &quot;$(ProjectDir)$(OutDir)$(AssemblyName).dll&quot; &quot;$(ProjectDir)_export\apps\$(AssemblyName)\ &quot;"/>
+    <Exec Command="xcopy /F /R /Y /I &quot;$(ProjectDir)Migrations\*.sql&quot; &quot;$(ProjectDir)_export\apps\$(AssemblyName)\migrations\ &quot;"/>
+    <Exec Command="xcopy /F /R /Y /I &quot;$(ProjectDir)Views\*&quot; &quot;$(ProjectDir)_export\Views\apps\$(AssemblyName)\ &quot;" />
+
     <Exec Command="xcopy /F /R /Y /I &quot;$(ProjectDir)$(OutDir)$(AssemblyName).dll&quot; &quot;$(RAYUKI_APP_PATH)\$(AssemblyName)\ &quot;" Condition="'$(Configuration)' == 'Debug'" />
-    <Exec Command="xcopy /F /R /Y /I &quot;$(ProjectDir)$(OutDir)$(AssemblyName).dll&quot; &quot;$(ProjectDir)_export\apps\$(AssemblyName)\ &quot;" Condition="'$(Configuration)' == 'Debug'" />
+    <Exec Command="xcopy /F /R /Y /I &quot;$(ProjectDir)Migrations\*.sql&quot; &quot;$(RAYUKI_APP_PATH)\$(AssemblyName)\migrations\ &quot;" Condition="'$(Configuration)' == 'Debug'" />
+    <Exec Command="xcopy /F /R /Y /I &quot;$(ProjectDir)Views\*&quot; &quot;$(RAYUKI_WWW_PATH)\..\Views\apps\$(AssemblyName)\ &quot;" Condition="'$(Configuration)' == 'Debug'" />
   </Target>
 
 

@@ -1,5 +1,7 @@
-﻿using Core.App;
-using AventusSharp.Tools.Attributes;
+﻿using AventusSharp.Tools.Attributes;
+using Core.App;
+using Core.Logic.FileSystem;
+using ${{DefaultApp}}.Migrations;
 
 namespace ${{DefaultApp}}
 {
@@ -28,6 +30,17 @@ namespace ${{DefaultApp}}
         public override Core.Migrations.Migrator? DefineMigrator()
         {
             return new Migrator();
+        }
+    }
+
+    public static class App
+    {
+        public static FileStorage FileStorage
+        {
+            get
+            {
+                return FileStorage.Get<CarteCommandeApp>();
+            }
         }
     }
 }

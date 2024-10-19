@@ -27,6 +27,13 @@ namespace Application {
 		/**
 		 * @inheritdoc
 		 */
+		protected override styleBefore(addStyle: (name: string) => void): void {
+			super.styleBefore(addStyle);
+			addStyle("@${{DefaultApp}}");
+		}
+		/**
+		 * @inheritdoc
+		 */
 		protected override async defineRoutes(): Promise<void> {
 			this.addRoute("/", IndexFrame);
 		 }

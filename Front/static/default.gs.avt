@@ -1,3 +1,5 @@
 :root {
-    // declare your variables here
+    // declare your css variables here
+    // You must not write any other css rules because it will affect the whole os
+    // To write custom rule you can use the file @${{DefaultApp}}.wcs.avt
 }

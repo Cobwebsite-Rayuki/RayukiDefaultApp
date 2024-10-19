@@ -3,10 +3,10 @@
   "csProj": "./${{DefaultApp}}.csproj",
   "exportEnumByDefault": true,
   "httpRouter": {
+    "createRouter": true,
     "uri": "/${{DefaultApp}}",
     "routerName": "${{DefaultApp}}Router",
-    "namespace": "Routes",
-    "variableRoutesName": "${{DefaultApp}}HttpRoutes"
+    "namespace": "Routes"
   },
   "wsEndpoint": {
     "prefix": "/${{DefaultApp}}"

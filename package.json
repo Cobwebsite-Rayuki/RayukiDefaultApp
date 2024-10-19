@@ -2,6 +2,8 @@
     "scripts": {
         "export": "powershell Compress-Archive ./_export/* ./${{DefaultApp}}.zip",
         "build": "dotnet build --nologo -v q --property WarningLevel=0 /clp:ErrorsOnly",
-        "link" : "mklink D:\\Rayuki\\Apps\\system\\Explorer\\Front\\static\\_default.gs.avt D:\\Rayuki\\Core\\Core\\Front\\static\\autoload\\themes\\_default.gs.avt"
+        "link": "npm run link:theme && npm run link:functions",
+        "link:theme": "mklink \"./Front/static/_theme.gs.avt\" %RAYUKI_THEME%",
+        "link:functions": "mklink \"./Front/static/_functions.gs.avt\" %RAYUKI_FUNCTIONS%"
     }
 }
