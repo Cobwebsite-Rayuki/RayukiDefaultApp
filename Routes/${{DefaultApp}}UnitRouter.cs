@@ -6,7 +6,7 @@ using Path = AventusSharp.Routes.Attributes.Path;
 
 namespace ${{DefaultApp}}.Routes
 {
-    public class ${{DefaultApp}}UnitRoute : StorableRoute<${{DefaultApp}}Unit>
+    public class ${{DefaultApp}}UnitRouter : StorableRouter<${{DefaultApp}}Unit>
     {
         [Get, Path("/custom")]
         public List<${{DefaultApp}}Unit> MyCustomRoute()

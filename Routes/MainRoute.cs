@@ -4,9 +4,9 @@ using Core.Routes;
 
 namespace ${{DefaultApp}}.Routes
 {
-    public class MainRoute : Route
+    public class MainRoute : Router
     {
-        [NoTypescript]
+        [NoExport]
         public Component Index()
         {
             return new Component("Main");

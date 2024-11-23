@@ -5,7 +5,7 @@ using ${{DefaultApp}}.Migrations;
 
 namespace ${{DefaultApp}}
 {
-    [Typescript]
+    [Export]
     public class AppInfo {
         public static int Version = 1;
     }
