@@ -4,7 +4,7 @@ using Core.Routes;
 
 namespace ${{DefaultApp}}.Routes
 {
-    public class MainRoute : Router
+    public class MainRouter : Router
     {
         [NoExport]
         public Component Index()
