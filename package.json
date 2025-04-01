@@ -2,8 +2,9 @@
     "scripts": {
         "export": "powershell Compress-Archive ./_export/* ./${{DefaultApp}}.zip",
         "build": "dotnet build --nologo -v q --property WarningLevel=0 /clp:ErrorsOnly",
-        "link": "npm run link:theme && npm run link:functions",
+        "link": "npm run link:theme && npm run link:functions && npm run link:snippets",
         "link:theme": "mklink \"./Front/static/_theme.gs.avt\" %RAYUKI_THEME%",
-        "link:functions": "mklink \"./Front/static/_functions.gs.avt\" %RAYUKI_FUNCTIONS%"
+        "link:functions": "mklink \"./Front/static/_functions.gs.avt\" %RAYUKI_FUNCTIONS%",
+        "link:snippets": "mklink \"./.vscode/Rayuki.code-snippets\" %RAYUKI_SNIPPETS%"
     }
 }
