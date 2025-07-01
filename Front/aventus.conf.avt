@@ -16,7 +16,7 @@
 			],
 			"dependances": [
 				{
-					"uri": "D:\\Rayuki\\Libs\\RayukiCore\\Core.package.avt",
+					"uri": "%RAYUKI_CORE_PACKAGE%",
 					"include": "none"
 				},
 				{
@@ -51,7 +51,7 @@
 			],
 			"dependances": [
 				{
-					"uri": "D:\\Rayuki\\Libs\\RayukiCore\\Core.package.avt",
+					"uri": "%RAYUKI_CORE_PACKAGE%",
 					"include": "none"
 				},
 				{

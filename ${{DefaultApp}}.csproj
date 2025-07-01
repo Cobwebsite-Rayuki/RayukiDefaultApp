@@ -10,10 +10,10 @@
 
   <ItemGroup>
     <Reference Include="AventusSharp">
-      <HintPath>D:\Rayuki\Libs\AventusSharp\AventusSharp.dll</HintPath>
+      <HintPath>$(RAYUKI_SHARP_DLL)</HintPath>
     </Reference>
     <Reference Include="Core">
-      <HintPath>D:\Rayuki\Libs\RayukiCore\Core.dll</HintPath>
+      <HintPath>$(RAYUKI_CORE_DLL)</HintPath>
     </Reference>
   </ItemGroup>
 
